@@ -12,10 +12,8 @@ class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(120), index=True, unique=True)
-    # this line links the two db's, but posts is not an actual column in the Table database
-    # cont. rather it is a high level relationship
     password_hash = db.Column(db.String(128))
-    posts = db.relationship('Post', backref='author')
+    posts = db.relationship('Post', backref='author', lazy='dynamic')
 
     def __repr__(self):
         return '<User {}>'.format(self.username)
@@ -25,7 +23,6 @@ class User(UserMixin, db.Model):
 
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
-
 
 
 # Database for all posts
