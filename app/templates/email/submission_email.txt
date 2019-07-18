@@ -1,0 +1,9 @@
+Dear {{ user.username }},
+
+The secondary structure of your protein:
+
+If you have not requested a password reset simply ignore this message.
+
+Sincerely,
+
+The Hermes Team

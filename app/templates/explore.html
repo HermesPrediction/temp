@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+    <h1 style="font-size:50px">Most Recent Submissions</h1>
+      </form>
+      {% for post in posts %}
+      <div>
+          <p style="font-size:18px">{{ post.body[:85] }}</p>
+          <p style="font-size:18px">{{ post.body[85:170] }}</p>
+          <p style="font-size:18px">{{ post.body[170:] }}</p>
+          <br>
+      </div>
+    {% endfor %}
+    <nav aria-label="...">
+        <ul class="pager">
+            <li class="previous{% if not prev_url %} disabled{% endif %}">
+                <a href="{{ prev_url or '#' }}">
+                    <span aria-hidden="true">&larr;</span> Newer posts
+                </a>
+            </li>
+            <li class="next{% if not next_url %} disabled{% endif %}">
+                <a href="{{ next_url or '#' }}">
+                    Older posts <span aria-hidden="true">&rarr;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+{% endblock %}

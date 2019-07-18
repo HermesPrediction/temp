@@ -1,0 +1,129 @@
+2019-07-17 12:51:32,663 ERROR: Exception on /index [GET] [in /anaconda3/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/main/routes.py", line 46, in index
+    return render_template("index.html", title='Home Page', form=form)
+  File "/anaconda3/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/anaconda3/lib/python3.6/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/anaconda3/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/anaconda3/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/anaconda3/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/anaconda3/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/anaconda3/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/anaconda3/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/anaconda3/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block "body"
+    {% block navbar %}
+  File "/Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/templates/base.html", line 17, in block "navbar"
+    <a class="navbar-brand" href="{{ url_for('index') }}">Hermes</a>
+  File "/anaconda3/lib/python3.6/site-packages/flask/helpers.py", line 333, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1805, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/anaconda3/lib/python3.6/site-packages/flask/helpers.py", line 323, in url_for
+    force_external=external)
+  File "/anaconda3/lib/python3.6/site-packages/werkzeug/routing.py", line 1768, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'index'. Did you mean 'main.index' instead?
+2019-07-17 12:52:30,306 INFO: Hermes startup [in /Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/__init__.py:115]
+2019-07-17 12:52:39,893 ERROR: Exception on /index [GET] [in /anaconda3/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/main/routes.py", line 46, in index
+    return render_template("index.html", title='Home Page', form=form)
+  File "/anaconda3/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/anaconda3/lib/python3.6/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/anaconda3/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/anaconda3/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/anaconda3/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/anaconda3/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/anaconda3/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/anaconda3/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/anaconda3/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block "body"
+    {% block navbar %}
+  File "/Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/templates/base.html", line 24, in block "navbar"
+    <li><a href="{{ url_for('docs_downloads') }}">Docs & Downloads</a></li>
+  File "/anaconda3/lib/python3.6/site-packages/flask/helpers.py", line 333, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1805, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/anaconda3/lib/python3.6/site-packages/flask/helpers.py", line 323, in url_for
+    force_external=external)
+  File "/anaconda3/lib/python3.6/site-packages/werkzeug/routing.py", line 1768, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'docs_downloads'. Did you mean 'main.docs_downloads' instead?
+2019-07-17 12:53:19,217 INFO: Hermes startup [in /Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/__init__.py:115]
+2019-07-17 13:09:17,146 INFO: Hermes startup [in /Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/__init__.py:115]
+2019-07-17 13:09:44,924 INFO: Hermes startup [in /Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/__init__.py:115]
+2019-07-17 13:12:32,011 INFO: Hermes startup [in /Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/__init__.py:115]
+2019-07-17 13:12:47,482 INFO: Hermes startup [in /Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/__init__.py:115]
+2019-07-17 13:13:12,715 INFO: Hermes startup [in /Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/__init__.py:115]
+2019-07-17 13:14:08,685 INFO: Hermes startup [in /Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/__init__.py:115]
+2019-07-17 13:14:28,800 INFO: Hermes startup [in /Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/__init__.py:115]
+2019-07-17 13:14:43,724 INFO: Hermes startup [in /Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/__init__.py:115]
+2019-07-17 13:14:58,268 INFO: Hermes startup [in /Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/__init__.py:115]
+2019-07-17 13:15:11,849 INFO: Hermes startup [in /Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/__init__.py:115]
+2019-07-17 15:48:21,886 INFO: Hermes startup [in /Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/__init__.py:115]
+2019-07-17 15:48:38,008 INFO: Hermes startup [in /Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/__init__.py:115]
+2019-07-17 15:55:15,100 INFO: Hermes startup [in /Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/__init__.py:115]
+2019-07-17 18:13:24,308 INFO: Hermes startup [in /Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/__init__.py:115]
+2019-07-17 18:45:38,997 INFO: Hermes startup [in /Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/__init__.py:115]
+2019-07-17 18:45:50,668 INFO: Hermes startup [in /Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/__init__.py:115]
+2019-07-17 18:46:25,935 INFO: Hermes startup [in /Users/LarryBliss/PycharmProjects/Hermes_Prediction/app/__init__.py:115]

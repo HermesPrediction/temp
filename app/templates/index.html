@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+    <h1 style="font-size:50px">Hi, {{ current_user.username }}!</h1>
+    <br>
+    <div style="font-size:18px; LINE-HEIGHT:20px;">Example Fasta Input:</div>
+    <div style="font-size:18px; LINE-HEIGHT:20px;">>d1a12a_</div>
+    <div style="font-size:18px; LINE-HEIGHT:20px;">IKSALLVLEDGTQFHGRAIGATGSAVGEVVFNTSMTGYQEILTDPSYSRQIVTLTYPHIGNVGTNDADEE
+    SSQVHAQGLVIRDLPLIASNFRNTEDLSSYLKRHNIVAIADIDTRKLTRLLREKGAQNGCIIAGDNPDAAL</div>
+    {% if form %}
+    {{ wtf.quick_form(form) }}
+    <br>
+    <p style="font-size:18px">If you would like help with submission or to report an issue please contact: hermesprediction@gmail.com </p>
+    {% endif %}
+    {% for post in posts %}
+    {% endfor %}
+{% endblock %}

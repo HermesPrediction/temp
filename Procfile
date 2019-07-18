@@ -1,0 +1,1 @@
+web: flask db upgrade; gunicorn Hermes_Prediction:app

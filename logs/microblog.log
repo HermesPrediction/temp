@@ -1,0 +1,27 @@
+2019-07-15 19:59:45,724 ERROR: Exception on /index/submission [GET] [in /anaconda3/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/anaconda3/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/anaconda3/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/anaconda3/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/LarryBliss/Documents/Viper 2/microblog/app/routes.py", line 97, in submission
+    DNA, RNA, protein, protein_length, Hermes_final_solution = Launcher(dummy_email, seq)
+  File "/Users/LarryBliss/Documents/Viper 2/microblog/app/backend/Houston.py", line 17, in Launcher
+    query.Structure_Layer()
+  File "/Users/LarryBliss/Documents/Viper 2/microblog/app/backend/Hermes_Main.py", line 97, in Structure_Layer
+    Structure_Layer_MLP(self.active_predictors, inp), Structure_Layer_RNN(self.active_predictors, inp),
+  File "/Users/LarryBliss/Documents/Viper 2/microblog/app/backend/Hermes_Main.py", line 1641, in Structure_Layer_MLP
+    clf_file = open(Dir1 + "New_Hermes_105_" + str(active_preds[1]) + "_MLP_" + active_preds[0] + '.pickle', 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/LarryBliss/Documents/Viper 2/microblog/app/backend//Structure Layer Neural Network Weights - Models/New_Hermes_105_9_MLP_GORIV_PHD_NetSurfP_pS2_JPRED4_Spider3_RaptorX_SSpro_Porter4.pickle'
+2019-07-15 20:12:03,451 INFO: Microblog startup [in /Users/LarryBliss/Documents/Viper 2/microblog/app/__init__.py:81]
+2019-07-15 21:03:04,715 INFO: Microblog startup [in /Users/LarryBliss/Documents/Viper 2/microblog/app/__init__.py:81]

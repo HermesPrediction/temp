@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>About</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+
+    <section class="ftco-section ftco-no-pt">
+    	<div class="container">
+    		<div class="row d-md-flex">
+	    		<div class="col-md-12 ftco-animate p-md-5">
+		          <div class="col-md-12 d-flex align-items-center">
+                    <div>
+                        <h1 style="font-size:50px">About</h1>
+                        <p style="font-size:18px">Hermes, an ensemble protein secondary structure predictor, was created to fulfill a small part of the Sheppard Lab's broad research aims</p>
+                        <p style="font-size:18px">The paper is currently available as a <a href="https://www.biorxiv.org/content/10.1101/640656v1">preprint on BioRxiv</a></p>
+                        <p style="font-size:18px">Our research centres on the use of genetics/genomics and phenotypic studies to address complex questions in the ecology, epidemiology and evolution of microbes. Our
+                            most recent interest focuses upon comparative genome analysis to describe the core and flexible genome of pathogenic bacteria (Campylobacter, Staphylococcus, Helicobacter and Escherichia coli) and how this is related to population genetic structuring, the maintenance of species, and the evolution of host/niche adaptation and virulence.</p>
+                        <p style="font-size:18px"></p>
+                        <p style="font-size:18px">Our laboratory is part of the <a href="https://www.climb.ac.uk">Medical Research Council (MRC) CLIMB Consortium</a></p>
+                        <a href="https://www.climb.ac.uk"><img src="static/MRC_CLIMB_Logo.jpg" style="width:230px;height:75px;border:0;"></a>
+                        <a href="https://www.bath.ac.uk/research-centres/milner-centre-for-evolution/"><img src="static/Milner_Center_For_Evolution_Logo.jpg" style="width:230px;height:75px;border:0;"></a>
+                        <p style="font-size:18px"></p>
+                        <p style="font-size:18px"><a href="https://twitter.com/sheppard_lab?lang=en" class="btn btn-primary p-3">Follow us on Twitter</a> <a href="https://sheppardlab.com/publications/" class="btn btn-primary p-3">Latest Publications</a></p>
+                    </div>
+                  </div>
+
+		        </div>
+		    </div>
+    	</div>
+    </section>
+
+</html>
+{% endblock %}
