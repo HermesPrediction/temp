@@ -27,7 +27,7 @@ class User(UserMixin, db.Model):
 # Database for all posts
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    body = db.Column(db.String(140))
+    body = db.Column(db.String(1000))
     # the default argument sets this column to whatever is in that field, here it is datetime.utcnow
     # cont. notice that it is datetime.utcnow not datetime.utcnow(),
     # cont. the former sends the object and sets it for each now post
