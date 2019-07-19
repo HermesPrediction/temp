@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>About</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+
+    <section class="ftco-section ftco-no-pt">
+    	<div class="container">
+    		<div class="row d-md-flex">
+	    		<div class="col-md-12 ftco-animate p-md-5">
+		          <div class="col-md-12 d-flex align-items-center">
+                    <div>
+                        <h1 style="font-size:50px">Docs & Downloads</h1>
+                        <p style="font-size:18px">The publication for Hermes is currently available as a <a href="https://www.biorxiv.org/content/10.1101/640656v1">preprint on BioRxiv</a></p>
+                        <p style="font-size:18px">The source code and all associated files are hosted in two separate forms:</p>
+                        <p style="font-size:18px">1. <a href="https://github.com/HermesPrediction/Hermes">GitHub</a>, Hermes without the mechanism to deal with individual Protein Layer server crashes</p>
+                        <p style="font-size:18px">2. <a href="https://drive.google.com/open?id=1sy_DXgULBPtS4TAYqY2fyF9TnbqkOpDj">Google Drive</a>, The complete Hermes collection</p>
+                        <br>
+                        <p style="font-size:18px">Below are specific links for the training and validation evaluation files:</p>
+                        <br>
+                        <p style="font-size:18px">- <a href="https://github.com/HermesPrediction/Hermes/tree/master/Evaluation%20Files/Training">Training</a></p>
+                        <p style="font-size:18px; margin-left: 60px">• <a href="https://github.com/HermesPrediction/Hermes/blob/master/Evaluation%20Files/Training/All%20JPRED%20Training%20Predictions%20w%20SOV%20Scores.txt">All JPRED Training Predictions w SOV Scores Redundancy Reduced</a></p>
+                        <br>
+                        <p style="font-size:18px">- <a href="https://github.com/HermesPrediction/Hermes/tree/master/Evaluation%20Files/Blind%20Test">Blind Test</a></p>
+                        <p style="font-size:18px; margin-left: 60px">• <a href="https://github.com/HermesPrediction/Hermes/blob/master/Evaluation%20Files/Blind%20Test/All%20Blind%20Test%20Predictions%20w%20SOV%20Scores%20Redundancy%20Reduced.txt">All JPRED Blind Test Predictions w SOV Scores Redundancy Reduced</a></p>
+                        <p style="font-size:18px; margin-left: 60px">~ A text file of all JPRED Blind test proteins, with all predictions, respective Q3's, and the experimentally determined DSSP-classified structure</p>
+                        <p style="font-size:18px; margin-left: 60px">• <a href="https://github.com/HermesPrediction/Hermes/blob/master/Evaluation%20Files/Blind%20Test/All%20Blind%20Test%20Neff%20and%20Identity%20Scores">All JPRED Blind Test NEFF & Identity Scores</a></p>
+                        <p style="font-size:18px; margin-left: 60px">~ A text file of all NEFF & identity values for all the JPRED Blind test proteins</p>
+                        <br>
+                        <p style="font-size:18px">- <a href="https://github.com/HermesPrediction/Hermes/tree/master/Evaluation%20Files/CASP11">CASP11</a></p>
+                        <p style="font-size:18px; margin-left: 60px">• <a href="https://github.com/HermesPrediction/Hermes/blob/master/Evaluation%20Files/CASP11/All%20CASP11%20Predictions%20w%20SOV%20Scores%20Redundancy%20Reduced.txt">All CASP11 Predictions w SOV Scores Redundancy Reduced</a></p>
+                        <p style="font-size:18px; margin-left: 60px">~ A text file of all CASP11 proteins, with all predictions, respective Q3's, and the experimentally determined DSSP-classified structure</p>
+                        <p style="font-size:18px; margin-left: 60px">• <a href="https://github.com/HermesPrediction/Hermes/blob/master/Evaluation%20Files/CASP11/All%20CASP11%20Neff%20and%20Identity%20Scores">All CASP11 NEFF & Identity Scores</a></p>
+                        <p style="font-size:18px; margin-left: 60px">~ A text file of all NEFF & identity values for all the CASP11 proteins</p>
+                        <br>
+                        <p style="font-size:18px">- <a href="https://github.com/HermesPrediction/Hermes/tree/master/Evaluation%20Files/CASP12">CASP12</a></p>
+                        <p style="font-size:18px; margin-left: 60px">• <a href="https://github.com/HermesPrediction/Hermes/blob/master/Evaluation%20Files/CASP12/All%20CASP12%20Predictions%20Minus%20SSpro%20w%20SOV%20Scores%20Redundancy%20Reduced.txt">All CASP12 Predictions Minus SSpro w SOV Scores Redundancy Reduced</a></p>
+                        <p style="font-size:18px; margin-left: 60px">~ A text file of all CASP12 proteins, with all predictions except for SSpro, respective Q3's, and the experimentally determined DSSP-classified structure</p>
+                        <p style="font-size:18px; margin-left: 60px">• <a href="https://github.com/HermesPrediction/Hermes/blob/master/Evaluation%20Files/CASP12/All%20CASP12%20Neff%20and%20Identity%20Scores">All CASP12 NEFF & Identity Scores</a></p>
+                        <p style="font-size:18px; margin-left: 60px">~ A text file of all NEFF & identity values for all the CASP12 proteins</p>
+                        <br>
+                        <p style="font-size:18px">- <a href="https://github.com/HermesPrediction/Hermes/tree/master/Evaluation%20Files/CASP13">CASP13</a></p>
+                        <p style="font-size:18px; margin-left: 60px">• <a href="https://github.com/HermesPrediction/Hermes/blob/master/Evaluation%20Files/CASP13/All%20CASP13%20Predictions%20w%20SOV%20Scores%20Redundancy%20Reduced.txt">All CASP13 Predictions w SOV Scores Redundancy Reduced</a></p>
+                        <p style="font-size:18px; margin-left: 60px">~ A text file of all CASP13 proteins, with all predictions, respective Q3's, and the experimentally determined DSSP-classified structure</p>
+                        <p style="font-size:18px; margin-left: 60px">• <a href="https://github.com/HermesPrediction/Hermes/blob/master/Evaluation%20Files/CASP13/All%20CASP13%20Neff%20and%20Identity%20Scores">All CASP13 NEFF & Identity Scores</a></p>
+                        <p style="font-size:18px; margin-left: 60px">~ A text file of all NEFF & identity values for all the CASP13 proteins</p>
+                        <br>
+                        <p style="font-size:18px">- <a href="https://github.com/HermesPrediction/Hermes/tree/master/Evaluation%20Files/7-Fold%20Cross%20Validation">7-Fold Cross Validation</a></p>
+                        <p style="font-size:18px; margin-left: 60px">• <a href="https://github.com/HermesPrediction/Hermes/blob/master/Evaluation%20Files/7-Fold%20Cross%20Validation/Hermes_Cross_Val_model0.tfl">Model 0</a></p>
+                        <p style="font-size:18px; margin-left: 60px">• <a href="https://github.com/HermesPrediction/Hermes/blob/master/Evaluation%20Files/7-Fold%20Cross%20Validation/Hermes_Cross_Val_model1.tfl">Model 1</a></p>
+                        <p style="font-size:18px; margin-left: 60px">• <a href="https://github.com/HermesPrediction/Hermes/blob/master/Evaluation%20Files/7-Fold%20Cross%20Validation/Hermes_Cross_Val_model2.tfl">Model 2</a></p>
+                        <p style="font-size:18px; margin-left: 60px">• <a href="https://github.com/HermesPrediction/Hermes/blob/master/Evaluation%20Files/7-Fold%20Cross%20Validation/Hermes_Cross_Val_model3.tfl">Model 3</a></p>
+                        <p style="font-size:18px; margin-left: 60px">• <a href="https://github.com/HermesPrediction/Hermes/blob/master/Evaluation%20Files/7-Fold%20Cross%20Validation/Hermes_Cross_Val_model4.tfl">Model 4</a></p>
+                        <p style="font-size:18px; margin-left: 60px">• <a href="https://github.com/HermesPrediction/Hermes/blob/master/Evaluation%20Files/7-Fold%20Cross%20Validation/Hermes_Cross_Val_model5.tfl">Model 5</a></p>
+                        <p style="font-size:18px; margin-left: 60px">• <a href="https://github.com/HermesPrediction/Hermes/blob/master/Evaluation%20Files/7-Fold%20Cross%20Validation/Hermes_Cross_Val_model6.tfl">Model 6</a></p>
+                        <p style="font-size:18px; margin-left: 60px">~ Seven files, each a set of weights & biases for the respective cross-validation model</p>
+                    </div>
+                  </div>
+
+		        </div>
+		    </div>
+    	</div>
+    </section>
+</html>
+{% endblock %}
